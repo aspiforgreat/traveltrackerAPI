@@ -11,8 +11,7 @@ const app = express();
 import mongoose from "mongoose";
 import budgetRoutes from "./routes/budgetRoutes.js";
 //
-const MONGO_URI = "mongodb+srv://local:dbPassword@traveltracker.hubyo.mongodb.net/?retryWrites=true&w=majority&appName=travelTracker"; // Change to your database name
-
+const MONGO_URI = process.env.MONGO_URI;
 mongoose
     .connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("MongoDB connected"))
