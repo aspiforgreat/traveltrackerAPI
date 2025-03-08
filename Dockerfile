@@ -3,9 +3,8 @@ FROM node:16
 WORKDIR /app
 
 # Copy backend files and install dependencies
-COPY package.json backend/package-lock.json ./
+COPY package.json package-lock.json ./
 RUN npm install
-
 
 # Set environment variables for MongoDB
 ENV MONGODB_URI=mongodb://mongo:27017/budgetDatabase
