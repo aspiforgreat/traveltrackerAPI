@@ -6,6 +6,7 @@ WORKDIR .
 COPY package.json package-lock.json ./
 RUN npm install
 
+COPY . ./
 # Set environment variables for MongoDB
 ENV MONGODB_URI=mongodb://mongo:27017/budgetDatabase
 
