@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config(); // Load .env variables
+
 import express from "express";
 import path from "path";
 import cors from "cors";
@@ -5,9 +8,6 @@ import boxRoutes from "./routes/boxRoutes.js";
 import tripRoutes from "./routes/tripRoutes.js";
 import statsRoutes from "./routes/statsRoutes.js";
 import transportConnectionRoutes from "./routes/transportConnectionRoutes.js";
-import dotenv from "dotenv";
-dotenv.config(); // Load .env variables
-
 
 const app = express();
 
