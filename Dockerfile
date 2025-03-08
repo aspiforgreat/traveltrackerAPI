@@ -1,6 +1,6 @@
 # Use Node.js for the backend
 FROM node:16
-WORKDIR /app
+WORKDIR .
 
 # Copy backend files and install dependencies
 COPY package.json package-lock.json ./
